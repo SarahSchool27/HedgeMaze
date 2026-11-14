@@ -10,18 +10,18 @@ namespace HedgeMaze {
         public void SetMode(int mode) {
             if (mode == 0) //base
             {
-                HedgeOne_Material.SetFloat("doRoses", (float)0.0);
-                HedgeOne_Material.SetFloat("doSpooky", (float)0.0);
+                HedgeOne_Material.SetFloat("_doRoses", (float)0.0);
+                HedgeOne_Material.SetFloat("_doSpooky", (float)0.0);
             }
             if (mode == 1) //Spooky
             {
-                HedgeOne_Material.SetFloat("doRoses", (float)0.0);
-                HedgeOne_Material.SetFloat("doSpooky", (float)1.0);
+                HedgeOne_Material.SetFloat("_doRoses", (float)0.0);
+                HedgeOne_Material.SetFloat("_doSpooky", (float)1.0);
             }
             if (mode == 1) //Rosesa
             {
-                HedgeOne_Material.SetFloat("doRoses", (float)1.0);
-                HedgeOne_Material.SetFloat("doSpooky", (float)0.0);
+                HedgeOne_Material.SetFloat("_doRoses", (float)1.0);
+                HedgeOne_Material.SetFloat("_doSpooky", (float)0.0);
             }
 
         }
