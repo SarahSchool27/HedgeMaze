@@ -20,6 +20,7 @@ namespace HedgeMaze {
         [SerializeField] private GameObject roundOneHedges;
         [SerializeField] private GameObject roundTwoHedges;
         [SerializeField] private GameObject roundThreeHedges;
+        [SerializeField] private MaterialUpdater updater;
 
         [SerializeField] List<HedgeMazePawn> players;
    
@@ -36,6 +37,7 @@ namespace HedgeMaze {
             StartCoroutine(GameTimer());
         }
         IEnumerator GameTimer() {
+            
             // Intro Animation
             HedgeMazePawn.isPawnInputEnabled = false;
             roundOneText.SetActive(true);
@@ -48,7 +50,7 @@ namespace HedgeMaze {
                 timerText.text = "" + ((int)(roundDuration - timer));
                 yield return null;
             }
-
+            updater.SetMode(1);
             timer = 0f;
             HedgeMazePawn.isPawnInputEnabled = false;
             roundTwoText.SetActive(true);
@@ -60,7 +62,7 @@ namespace HedgeMaze {
             yield return new WaitForSeconds(textTime);
             roundTwoText.SetActive(false);
             HedgeMazePawn.isPawnInputEnabled = true;
-
+            updater.SetMode(2);
             // Timer
             timer = 0f;
             while (timer < roundDuration) {
