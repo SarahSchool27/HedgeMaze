@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Game/Framework/Menus/PackageSelection/PackageSelection.unity
     guid: 22da71f348880464cb47774aa03a88b3
   - enabled: 1
-    path: Assets/Game/1 Examples/FumperFalls/FumperFalls.unity
+    path: Assets/Game/1 Examples/HedgeMaze/HedgeMaze.unity
     guid: 1c00c753017bcf6428fb0567ceee5962
   - enabled: 1
     path: Assets/Game/Framework/Menus/Results/Results.unity
