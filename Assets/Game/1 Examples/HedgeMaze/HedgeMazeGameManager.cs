@@ -38,6 +38,7 @@ namespace HedgeMaze {
 
 
         private void Start() {
+
             StartCoroutine(GameTimer());
         }
         IEnumerator GameTimer() {
@@ -120,7 +121,10 @@ namespace HedgeMaze {
                 scores.Add(pawn.score);
             }
             MinigameManager.Ranking ranking = new();
+            
             ranking.DetermineRankingFromScores(scores);
+            print("score: " + scores.ToString());
+            print("Ranking:" + ranking.ToString());
             // End
             yield return new WaitForSeconds(2);
             MinigameManager.instance.EndMinigame(ranking);

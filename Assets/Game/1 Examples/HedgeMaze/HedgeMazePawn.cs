@@ -13,7 +13,7 @@ namespace HedgeMaze {
         [SerializeField] private float gravity = -50f;
         [SerializeField] private Vector3 round2Start;
         [SerializeField] private Vector3 round3Start;
-        [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] public TextMeshProUGUI scoreText;
 
         //audio pickup sound
         [SerializeField] AudioSource pickupSFX;
