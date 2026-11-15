@@ -37,7 +37,8 @@ namespace HedgeMaze {
             StartCoroutine(GameTimer());
         }
         IEnumerator GameTimer() {
-            
+            updater.SetMode(0);
+
             // Intro Animation
             HedgeMazePawn.isPawnInputEnabled = false;
             roundOneText.SetActive(true);
