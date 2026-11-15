@@ -61,7 +61,7 @@ namespace HedgeMaze {
             }
 
             
-            updater.SetMode(1);
+            //updater.SetMode(1);
             //round 2
             roundChangePlayer.Play();
             timer = 0f;
@@ -69,6 +69,7 @@ namespace HedgeMaze {
             roundTwoText.SetActive(true);
             roundOneHedges.SetActive(false);
             roundTwoHedges.SetActive(true);
+            updater.SetMode(1);
             foreach (HedgeMazePawn pawn in players) {
                 pawn.StartRound2();
             }
@@ -76,7 +77,7 @@ namespace HedgeMaze {
             
             roundTwoText.SetActive(false);
             HedgeMazePawn.isPawnInputEnabled = true;
-            updater.SetMode(2);
+            //updater.SetMode(2);
             // Timer
             timer = 0f;
             while (timer < roundDuration) {
@@ -91,6 +92,7 @@ namespace HedgeMaze {
             roundThreeText.SetActive(true);
             roundTwoHedges.SetActive(false);
             roundThreeHedges.SetActive(true);
+            updater.SetMode(2);
             foreach (HedgeMazePawn pawn in players) {
                 pawn.StartRound3();
             }

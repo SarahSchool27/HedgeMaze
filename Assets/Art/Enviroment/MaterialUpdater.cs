@@ -18,7 +18,7 @@ namespace HedgeMaze {
                 HedgeOne_Material.SetFloat("_doRoses", (float)0.0);
                 HedgeOne_Material.SetFloat("_doSpooky", (float)1.0);
             }
-            if (mode == 1) //Rosesa
+            if (mode == 2) //Rosesa
             {
                 HedgeOne_Material.SetFloat("_doRoses", (float)1.0);
                 HedgeOne_Material.SetFloat("_doSpooky", (float)0.0);
