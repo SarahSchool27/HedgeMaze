@@ -3420,7 +3420,7 @@ MonoBehaviour:
   onPlayerIndexChanged:
     m_PersistentCalls:
       m_Calls: []
-  speed: 8
+  speed: 20
   gravity: -50
   round2Start: {x: 5, y: 0.84685, z: -10.5}
   round3Start: {x: 1.45, y: 0.65, z: -1.64}
@@ -4215,7 +4215,7 @@ MonoBehaviour:
   onPlayerIndexChanged:
     m_PersistentCalls:
       m_Calls: []
-  speed: 8
+  speed: 20
   gravity: -50
   round2Start: {x: -2, y: 0.84685, z: -10.5}
   round3Start: {x: 1.68, y: 0.65, z: 1.33}
@@ -6413,7 +6413,7 @@ MonoBehaviour:
   onPlayerIndexChanged:
     m_PersistentCalls:
       m_Calls: []
-  speed: 8
+  speed: 20
   gravity: -50
   round2Start: {x: -5, y: 0.84685, z: -10.5}
   round3Start: {x: -1.56, y: 0.65, z: 1.33}
@@ -12376,7 +12376,7 @@ MonoBehaviour:
   onPlayerIndexChanged:
     m_PersistentCalls:
       m_Calls: []
-  speed: 8
+  speed: 20
   gravity: -50
   round2Start: {x: 2, y: 0.84685, z: -10.5}
   round3Start: {x: -0.94, y: 0.65, z: -1.64}

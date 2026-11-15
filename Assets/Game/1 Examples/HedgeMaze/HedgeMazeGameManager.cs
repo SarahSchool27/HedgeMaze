@@ -38,6 +38,16 @@ namespace HedgeMaze {
 
 
         private void Start() {
+            if(PlayerManager.GetNumPlayers() < 4) {
+                players[3].scoreText.gameObject.SetActive(false);
+                players[3].gameObject.SetActive(false);
+                players.RemoveAt(3);
+                if(PlayerManager.GetNumPlayers() < 3) {
+                    players[2].scoreText.gameObject.SetActive(false);
+                    players[2].gameObject.SetActive(false);
+                    players.RemoveAt(2);
+                }
+            }
             StartCoroutine(GameTimer());
         }
         IEnumerator GameTimer() {
