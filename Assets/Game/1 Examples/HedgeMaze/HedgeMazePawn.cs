@@ -15,6 +15,9 @@ namespace HedgeMaze {
         [SerializeField] private Vector3 round3Start;
         [SerializeField] private TextMeshProUGUI scoreText;
 
+        //audio pickup sound
+        [SerializeField] AudioSource pickupSFX;
+
         public int score = 0;
         private Vector2 _moveInput = Vector2.zero;
         private Rigidbody _rigidbody;
@@ -32,7 +35,8 @@ namespace HedgeMaze {
         private void OnTriggerEnter(Collider other) {
 
             CustomTag tag = other.GetComponent<CustomTag>();
-            if (tag != null && tag.HasTag("Collectable")) {
+            if (tag != null && tag.HasTag("Collectable")) { //collect item
+                pickupSFX.Play();
                 score += 1;
                 other.gameObject.SetActive(false);
                 scoreText.text = ""+score;
