@@ -23,7 +23,11 @@ namespace HedgeMaze {
         [SerializeField] private MaterialUpdater updater;
 
         [SerializeField] List<HedgeMazePawn> players;
-   
+
+        //audio player
+        [SerializeField] AudioSource roundChangePlayer;
+        
+
         // UI VARIABLES
         [Header("UI")]
         [SerializeField] private GameObject roundOneText;
@@ -40,18 +44,26 @@ namespace HedgeMaze {
             updater.SetMode(0);
 
             // Intro Animation
+            //round one
+            roundChangePlayer.Play();
+            
             HedgeMazePawn.isPawnInputEnabled = false;
             roundOneText.SetActive(true);
             yield return new WaitForSeconds(textTime);
             roundOneText.SetActive(false);
             HedgeMazePawn.isPawnInputEnabled = true;
+            
             // Timer
             while (timer < roundDuration) {
                 timer += Time.deltaTime;
                 timerText.text = "" + ((int)(roundDuration - timer));
                 yield return null;
             }
+
+            
             updater.SetMode(1);
+            //round 2
+            roundChangePlayer.Play();
             timer = 0f;
             HedgeMazePawn.isPawnInputEnabled = false;
             roundTwoText.SetActive(true);
@@ -61,6 +73,7 @@ namespace HedgeMaze {
                 pawn.StartRound2();
             }
             yield return new WaitForSeconds(textTime);
+            
             roundTwoText.SetActive(false);
             HedgeMazePawn.isPawnInputEnabled = true;
             updater.SetMode(2);
@@ -71,6 +84,8 @@ namespace HedgeMaze {
                 timerText.text = "" + ((int)(roundDuration - timer));
                 yield return null;
             }
+            //round 3
+            roundChangePlayer.Play();
 
             HedgeMazePawn.isPawnInputEnabled = false;
             roundThreeText.SetActive(true);
