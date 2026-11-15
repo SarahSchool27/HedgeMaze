@@ -93,9 +93,7 @@ namespace HedgeMaze {
 
             HedgeMazePawn.isPawnInputEnabled = false;
             finishedText.SetActive(true);
-            yield return new WaitForSeconds(textTime);
-            finishedText.SetActive(false);
-
+            yield return new WaitForSeconds(0.5f);
             StartCoroutine(EndMinigame());
         }
 
